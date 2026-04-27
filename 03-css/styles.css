@@ -1,1 +1,201 @@
 /* Add your CSS code here  */
+
+:root {
+  --background-color: #f7f7f7;
+  --text-color: #121212;
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+  --gray-border: #cccccc;
+  --table-heading-background: #e9e9e9;
+  --table-backgroud: #d1d1d1;
+  --form-white: #fefefe;
+  --midnight-blue: #161678;
+  --midnight-blue-dark: #0a0a51;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+/*Navigation styles*/
+.nav {
+  background-color: var(--dark-slate-infinity);
+}
+
+.nav-list {
+  padding: 0.5rem;
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.nav-link {
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--ice-blue-juvie);
+}
+
+.nav-link:hover {
+  background-color: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+}
+
+/*Main area styles */
+.books-container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 0 1rem;
+}
+.main-heading {
+  margin: 1.5rem;
+  text-align: center;
+  color: var(--gothic-gray-blue);
+}
+
+.font-cinzel {
+  font-family: "Cinzel";
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+/*Section*/
+.h2 {
+  border-bottom: 1px solid var(--gray-border);
+}
+/*Book List*/
+.books-list li {
+  margin-bottom: 0.5rem;
+}
+
+.books_list li > ol {
+  margin-top: 0.4rem;
+}
+
+.images-container {
+  text-align: center;
+}
+
+.book-images {
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.book-images:hover {
+  transform: scale(1.1);
+}
+
+/*Table*/
+.table {
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--gray-border);
+  padding: 0.5rem;
+  text-align: cener;
+}
+
+.table tr:nth-child(even) {
+  background-color: var(--table-background);
+}
+
+.table-heading {
+  background-color: var(--table-heading-background);
+}
+
+.table-footer td {
+  font-weight: bold;
+  background-color: var(--table-heading-background);
+}
+
+/*Form - IRA ROTH Calculator*/
+.form-container {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: var(--form-white);
+}
+
+.color-bg-blue {
+  background-color: var(--midnight-blue-dark);
+}
+
+.main-heading-form {
+  text-align: center;
+  color: var(--midnight-blue);
+}
+
+.form-element {
+  margin-bottom: 0.5rem;
+}
+
+.form-label {
+  display: inline-block;
+  width: 48%;
+}
+
+.form-input {
+  display: inline-block;
+  width: 44%;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.form-radios {
+  margin-left: 40px;
+  margin-bottom: 0.75rem;
+}
+
+.form-element:last-of-type {
+  margin: 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  width: 48%;
+  border: 0;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  background-color: var(--midnight-blue);
+  color: var(--form-white);
+}
+
+.btn-submit:hover {
+  background-color: var(--midnight-blue-dark);
+}
+
+.form-note {
+  font-size: 0.8rem;
+}
+
+.form-note a {
+  color: var(--midnight-blue);
+}
