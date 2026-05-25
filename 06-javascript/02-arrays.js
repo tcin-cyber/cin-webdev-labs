@@ -22,6 +22,12 @@ const pokemons = [
 ];
 
 // Add your code here for: forEachPokemon
+const forEachPokemon = function()
+{
+  pokemons.forEach((item) => {
+    console.log(`#${item.id} - ${item.name} - ${item.types.join(' / ')}`);
+  })
+};
 
 console.group('=========== forEachPokemon =========== ');
 console.log(forEachPokemon());
@@ -48,6 +54,11 @@ console.log(forEachPokemon());
 console.groupEnd();
 
 // Add your code here for: filterPokemons
+const filterPokemons = function(Type)
+{
+  const filteredPokemons = pokemons.filter((item) => item.types.includes(Type)).map((item) => item.name).sort();
+  return filteredPokemons;
+}
 
 console.group('=========== filterPokemons =========== ');
 console.log(filterPokemons('Fire'));
@@ -59,6 +70,25 @@ console.log(filterPokemons('Poison'));
 console.groupEnd();
 
 // Add your code here for: searchPokemons
+const searchPokemons = function (Search) {
+  const query = Search.toLowerCase();
+
+  const result = pokemons.filter((item) => {
+    const searchName = item.name.toLowerCase().includes(query);
+
+    const searchType = item.types.some((type) =>
+      type.toLowerCase().includes(query)
+    );
+
+    return searchName || searchType;
+  });
+
+  if (result.length === 0) {
+    return `No Pokémon found for "${Search}"`;
+  }
+
+  return result;
+};
 
 console.group('=========== searchPokemons =========== ');
 console.log(searchPokemons('Wartortle'));
@@ -77,6 +107,21 @@ console.log(searchPokemons('bug'));
 console.groupEnd();
 
 // Add your code here for: reducePokemons
+const reducePokemons = function () {
+  const result = pokemons.reduce((acc, pokemon) => {
+    pokemon.types.forEach((type) => {
+      if (acc[type]) {
+        acc[type]++;
+      } else {
+        acc[type] = 1;
+      }
+    });
+
+    return acc;
+  }, {});
+
+  return result;
+};
 
 console.group('=========== reducePokemons =========== ');
 console.log(reducePokemons);
