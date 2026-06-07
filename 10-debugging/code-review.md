@@ -86,7 +86,7 @@ This creates a poor user experience and makes the application appear unresponsiv
 
 Use `classList.add()` and `classList.remove()` to toggle the visibility of the loading indicator instead of overwriting the entire class attribute.
 
-Also, added `catFactsList.replaceChildren()` since every click on Load New Cat Facts creates another loader image. After several requests, multiple hidden loader GIFs will exist in the container.
+Also, added `loadingContainer.replaceChildren()` since every click on Load New Cat Facts creates another loader image. After several requests, multiple hidden loader GIFs will exist in the container.
 
 
 Updated code:
